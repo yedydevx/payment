@@ -21,11 +21,11 @@ const MODAL_SIZES: Record<ModalMode, string> = {
 
 // Estilos específicos por modo
 const MODAL_STYLES: Record<ModalMode, { headerBg: string; titleColor: string; borderColor: string }> = {
-    create: { headerBg: 'bg-[#b9f09e]/20', titleColor: 'text-[#2d524d]', borderColor: 'border-[#b9f09e]/30' },
-    edit: { headerBg: 'bg-[#b9f09e]/20', titleColor: 'text-[#2d524d]', borderColor: 'border-[#b9f09e]/30' },
-    delete: { headerBg: 'bg-[#b9f09e]/20', titleColor: 'text-[#2d524d]', borderColor: 'border-[#b9f09e]/30' },
-    upload: { headerBg: 'bg-[#b9f09e]/20', titleColor: 'text-[#2d524d]', borderColor: 'border-[#b9f09e]/30' },
-    view: { headerBg: 'bg-[#b9f09e]/20', titleColor: 'text-[#2d524d]', borderColor: 'border-[#b9f09e]/30' },
+    create: { headerBg: 'bg-[#3b82f6]/20', titleColor: 'text-[#1e3a8a]', borderColor: 'border-[#3b82f6]/30' },
+    edit: { headerBg: 'bg-[#3b82f6]/20', titleColor: 'text-[#1e3a8a]', borderColor: 'border-[#3b82f6]/30' },
+    delete: { headerBg: 'bg-[#3b82f6]/20', titleColor: 'text-[#1e3a8a]', borderColor: 'border-[#3b82f6]/30' },
+    upload: { headerBg: 'bg-[#3b82f6]/20', titleColor: 'text-[#1e3a8a]', borderColor: 'border-[#3b82f6]/30' },
+    view: { headerBg: 'bg-[#3b82f6]/20', titleColor: 'text-[#1e3a8a]', borderColor: 'border-[#3b82f6]/30' },
 };
 
 const Modal: React.FC<ModalProps> = ({

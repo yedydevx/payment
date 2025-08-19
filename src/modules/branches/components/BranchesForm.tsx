@@ -56,13 +56,13 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                 {/* Header */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-0 mb-6">
                     <div className="flex items-center gap-3">
-                        <div className="p-2 md:p-3 bg-[#2d524d] rounded-lg">
-                            <Building2 className="h-5 w-5 md:h-6 md:w-6 text-[#b9f09e]" />
+                        <div className="p-2 md:p-3 bg-gray-900 rounded-lg">
+                            <Building2 className="h-5 w-5 md:h-6 md:w-6 text-white" />
                         </div>
                         <div>
-                            <h1 className="text-xl md:text-2xl font-bold text-[#2d524d]">Nueva Sucursal</h1>
+                            <h1 className="text-xl md:text-2xl font-bold text-gray-900">Nueva Sucursal</h1>
                             <p className="text-sm md:text-base text-gray-600">
-                                Crear nueva sucursal para <strong className="text-[#2d524d]">{organizationName}</strong>
+                                Crear nueva sucursal para <strong className="text-gray-900">{organizationName}</strong>
                             </p>
                         </div>
                     </div>
@@ -70,7 +70,7 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                         onClick={() => onBack()}
                         variant="outline"
                         size="lg"
-                        className="hidden md:flex gap-2 border-[#2d524d] text-[#2d524d] hover:bg-[#b9f09e]/20 hover:border-[#2d524d]"
+                        className="hidden md:flex gap-2 border-gray-900 text-gray-900 hover:bg-gray-100 hover:border-gray-900"
                     >
                         <ArrowLeft className="h-4 w-4" />
                         Volver
@@ -79,11 +79,11 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
                     {/* Información Básica */}
-                    <Card className="border-gray-200 hover:border-[#b9f09e]/30 transition-colors">
+                    <Card className="border-gray-200 hover:border-gray-900/30 transition-colors">
                         <CardHeader className="pb-4">
-                            <CardTitle className="flex items-center gap-2 text-base md:text-lg text-[#2d524d]">
-                                <div className="p-2 bg-[#2d524d] rounded-lg">
-                                    <Building2 className="h-4 w-4 md:h-5 md:w-5 text-[#b9f09e]" />
+                            <CardTitle className="flex items-center gap-2 text-base md:text-lg text-gray-900">
+                                <div className="p-2 bg-gray-900 rounded-lg">
+                                    <Building2 className="h-4 w-4 md:h-5 md:w-5 text-white" />
                                 </div>
                                 Información Básica
                             </CardTitle>
@@ -91,7 +91,7 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                         <CardContent className="space-y-4">
                             {/* Nombre */}
                             <div className="space-y-2">
-                                <Label htmlFor="name" className="text-xs md:text-sm font-semibold text-[#2d524d] flex items-center gap-2">
+                                <Label htmlFor="name" className="text-xs md:text-sm font-semibold text-gray-900 flex items-center gap-2">
                                     Nombre de la Sucursal *
                                 </Label>
                                 <Input
@@ -100,7 +100,7 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                                     onChange={(e) => updateBranchField('name', e.target.value)}
                                     onBlur={() => updateBranchField('code', generateCode(branchData.name))}
                                     placeholder="Ej: Sede Principal"
-                                    className={`text-sm md:text-base border-gray-200 focus:border-[#2d524d] focus:ring-[#2d524d]/20 ${errors.name ? 'border-red-500' : ''}`}
+                                    className={`text-sm md:text-base border-gray-200 focus:border-gray-900 focus:ring-gray-900/20 ${errors.name ? 'border-red-500' : ''}`}
                                 />
                                 {errors.name && (
                                     <p className="text-red-500 text-xs md:text-sm">{errors.name}</p>
@@ -109,7 +109,7 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
 
                             {/* Código */}
                             <div className="space-y-2">
-                                <Label htmlFor="code" className="text-xs md:text-sm font-semibold text-[#2d524d] flex items-center gap-2">
+                                <Label htmlFor="code" className="text-xs md:text-sm font-semibold text-gray-900 flex items-center gap-2">
                                     Código de Sucursal *
                                 </Label>
                                 <div className="flex gap-2">
@@ -118,14 +118,14 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                                         value={branchData.code}
                                         onChange={(e) => updateBranchField('code', e.target.value.toUpperCase())}
                                         placeholder="Ej: SP001"
-                                        className={`text-sm md:text-base border-gray-200 focus:border-[#2d524d] focus:ring-[#2d524d]/20 ${errors.code ? 'border-red-500' : ''}`}
+                                        className={`text-sm md:text-base border-gray-200 focus:border-gray-900 focus:ring-gray-900/20 ${errors.code ? 'border-red-500' : ''}`}
                                     />
                                     <Button
                                         type="button"
                                         variant="outline"
                                         onClick={() => updateBranchField('code', generateCode(branchData.name))}
                                         disabled={!branchData.name}
-                                        className="border-[#2d524d] text-[#2d524d] hover:bg-[#b9f09e]/20 text-xs md:text-sm px-3 md:px-4"
+                                        className="border-gray-900 text-gray-900 hover:bg-gray-100 text-xs md:text-sm px-3 md:px-4"
                                     >
                                         Auto
                                     </Button>
@@ -139,11 +139,11 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                     </Card>
 
                     {/* Información de Contacto */}
-                    <Card className="border-gray-200 hover:border-[#b9f09e]/30 transition-colors">
+                    <Card className="border-gray-200 hover:border-gray-900/30 transition-colors">
                         <CardHeader className="pb-4">
-                            <CardTitle className="flex items-center gap-2 text-base md:text-lg text-[#2d524d]">
-                                <div className="p-2 bg-[#2d524d] rounded-lg">
-                                    <Phone className="h-4 w-4 md:h-5 md:w-5 text-[#b9f09e]" />
+                            <CardTitle className="flex items-center gap-2 text-base md:text-lg text-gray-900">
+                                <div className="p-2 bg-gray-900 rounded-lg">
+                                    <Phone className="h-4 w-4 md:h-5 md:w-5 text-white" />
                                 </div>
                                 Información de Contacto
                             </CardTitle>
@@ -160,7 +160,7 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                                         value={branchData.email}
                                         onChange={(e) => updateBranchField('email', e.target.value)}
                                         placeholder="correo@empresa.com"
-                                        className={`pl-10 text-sm md:text-base border-gray-200 focus:border-[#2d524d] focus:ring-[#2d524d]/20 ${errors.email ? 'border-red-500' : ''}`}
+                                        className={`pl-10 text-sm md:text-base border-gray-200 focus:border-gray-900 focus:ring-gray-900/20 ${errors.email ? 'border-red-500' : ''}`}
                                     />
                                 </div>
                                 {errors.email && (
@@ -178,7 +178,7 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                                         value={branchData.phone}
                                         onChange={(e) => updateBranchField('phone', e.target.value)}
                                         placeholder="Ej: +57 300 123 4567"
-                                        className="pl-10 text-sm md:text-base border-gray-200 focus:border-[#2d524d] focus:ring-[#2d524d]/20"
+                                        className="pl-10 text-sm md:text-base border-gray-200 focus:border-gray-900 focus:ring-gray-900/20"
                                     />
                                 </div>
                             </div>
@@ -187,11 +187,11 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                 </div>
 
                 {/* Ubicación */}
-                <Card className="border-gray-200 hover:border-[#b9f09e]/30 transition-colors">
+                <Card className="border-gray-200 hover:border-gray-900/30 transition-colors">
                     <CardHeader className="pb-4">
-                        <CardTitle className="flex items-center gap-2 text-base md:text-lg text-[#2d524d]">
-                            <div className="p-2 bg-[#2d524d] rounded-lg">
-                                <MapPin className="h-4 w-4 md:h-5 md:w-5 text-[#b9f09e]" />
+                        <CardTitle className="flex items-center gap-2 text-base md:text-lg text-gray-900">
+                            <div className="p-2 bg-gray-900 rounded-lg">
+                                <MapPin className="h-4 w-4 md:h-5 md:w-5 text-white" />
                             </div>
                             Ubicación
                         </CardTitle>
@@ -205,7 +205,7 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                                     value={branchData.address}
                                     onChange={(e) => updateBranchField('address', e.target.value)}
                                     placeholder="Dirección completa de la sucursal"
-                                    className="resize-none text-sm md:text-base border-gray-200 focus:border-[#2d524d] focus:ring-[#2d524d]/20"
+                                    className="resize-none text-sm md:text-base border-gray-200 focus:border-gray-900 focus:ring-gray-900/20"
                                     rows={2}
                                 />
                             </div>
@@ -218,7 +218,7 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                                         value={branchData.city}
                                         onChange={(e) => updateBranchField('city', e.target.value)}
                                         placeholder="Ej: Medellín"
-                                        className={`text-sm md:text-base border-gray-200 focus:border-[#2d524d] focus:ring-[#2d524d]/20 ${errors.city ? 'border-red-500' : ''}`}
+                                        className={`text-sm md:text-base border-gray-200 focus:border-gray-900 focus:ring-gray-900/20 ${errors.city ? 'border-red-500' : ''}`}
                                     />
                                     {errors.city && (
                                         <p className="text-red-500 text-xs md:text-sm">{errors.city}</p>
@@ -228,7 +228,7 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                                 <div className="space-y-2">
                                     <Label htmlFor="state" className="text-xs md:text-sm font-semibold text-gray-700">Estado/Departamento</Label>
                                     <Select value={branchData.state} onValueChange={(value) => updateBranchField('state', value)}>
-                                        <SelectTrigger className={`text-sm md:text-base border-gray-200 focus:border-[#2d524d] focus:ring-[#2d524d]/20 ${errors.state ? 'border-red-500' : ''}`}>
+                                        <SelectTrigger className={`text-sm md:text-base border-gray-200 focus:border-gray-900 focus:ring-gray-900/20 ${errors.state ? 'border-red-500' : ''}`}>
                                             <SelectValue placeholder="Seleccionar estado" />
                                         </SelectTrigger>
                                         <SelectContent>
@@ -249,7 +249,7 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                                 <div className="space-y-2">
                                     <Label htmlFor="country" className="text-xs md:text-sm font-semibold text-gray-700">País</Label>
                                     <Select value={branchData.country} onValueChange={(value) => updateBranchField('country', value)}>
-                                        <SelectTrigger className="text-sm md:text-base border-gray-200 focus:border-[#2d524d] focus:ring-[#2d524d]/20">
+                                        <SelectTrigger className="text-sm md:text-base border-gray-200 focus:border-gray-900 focus:ring-gray-900/20">
                                             <SelectValue placeholder="Seleccionar país" />
                                         </SelectTrigger>
                                         <SelectContent>
@@ -270,7 +270,7 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                                     value={branchData.postalCode}
                                     onChange={(e) => updateBranchField('postalCode', e.target.value)}
                                     placeholder="Ej: 050001"
-                                    className="text-sm md:text-base border-gray-200 focus:border-[#2d524d] focus:ring-[#2d524d]/20"
+                                    className="text-sm md:text-base border-gray-200 focus:border-gray-900 focus:ring-gray-900/20"
                                 />
                             </div>
                         </div>
@@ -278,11 +278,11 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                 </Card>
 
                 {/* Cuenta de Cobro de la Sede */}
-                <Card className="border-gray-200 hover:border-[#b9f09e]/30 transition-colors">
+                <Card className="border-gray-200 hover:border-gray-900/30 transition-colors">
                     <CardHeader className="pb-4">
-                        <CardTitle className="flex items-center gap-2 text-base md:text-lg text-[#2d524d]">
-                            <div className="p-2 bg-[#2d524d] rounded-lg">
-                                <CreditCard className="h-4 w-4 md:h-5 md:w-5 text-[#b9f09e]" />
+                        <CardTitle className="flex items-center gap-2 text-base md:text-lg text-gray-900">
+                            <div className="p-2 bg-gray-900 rounded-lg">
+                                <CreditCard className="h-4 w-4 md:h-5 md:w-5 text-white" />
                             </div>
                             Cuenta de Cobro de la Sede
                         </CardTitle>
@@ -296,7 +296,7 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                                     value={accountName}
                                     onChange={(e) => setAccountName(e.target.value)}
                                     placeholder="Ej: Recaudo Sede Medellín"
-                                    className="text-sm md:text-base border-gray-200 focus:border-[#2d524d] focus:ring-[#2d524d]/20"
+                                    className="text-sm md:text-base border-gray-200 focus:border-gray-900 focus:ring-gray-900/20"
                                 />
                             </div>
                             <div className="space-y-2">
@@ -306,13 +306,13 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                                     value={accountNumber}
                                     onChange={(e) => setAccountNumber(e.target.value)}
                                     placeholder="Ej: MED-001"
-                                    className="text-sm md:text-base border-gray-200 focus:border-[#2d524d] focus:ring-[#2d524d]/20"
+                                    className="text-sm md:text-base border-gray-200 focus:border-gray-900 focus:ring-gray-900/20"
                                 />
                             </div>
                             <div className="space-y-2">
                                 <Label className="text-xs md:text-sm font-semibold text-gray-700">Tipo de cuenta</Label>
                                 <Select value={accountType} onValueChange={(v) => setAccountType(v as TypeAccount)}>
-                                    <SelectTrigger className="text-sm md:text-base border-gray-200 focus:border-[#2d524d] focus:ring-[#2d524d]/20">
+                                    <SelectTrigger className="text-sm md:text-base border-gray-200 focus:border-gray-900 focus:ring-gray-900/20">
                                         <SelectValue placeholder="Seleccionar tipo" />
                                     </SelectTrigger>
                                     <SelectContent>
@@ -324,7 +324,7 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                             <div className="space-y-2">
                                 <Label htmlFor="accCategory" className="text-xs md:text-sm font-semibold text-gray-700">Categoría</Label>
                                 <Select value={accountCategoryId ? String(accountCategoryId) : ''} onValueChange={(v) => setAccountCategoryId(Number(v))}>
-                                    <SelectTrigger className="text-sm md:text-base border-gray-200 focus:border-[#2d524d] focus:ring-[#2d524d]/20">
+                                    <SelectTrigger className="text-sm md:text-base border-gray-200 focus:border-gray-900 focus:ring-gray-900/20">
                                         <SelectValue placeholder="Seleccionar categoría" />
                                     </SelectTrigger>
                                     <SelectContent>
@@ -344,7 +344,7 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                                     onChange={(e) => setAccountDescription(e.target.value)}
                                     placeholder="Opcional"
                                     rows={2}
-                                    className="resize-none h-20 text-sm md:text-base border-gray-200 focus:border-[#2d524d] focus:ring-[#2d524d]/20"
+                                    className="resize-none h-20 text-sm md:text-base border-gray-200 focus:border-gray-900 focus:ring-gray-900/20"
                                 />
                             </div>
                         </div>
@@ -352,11 +352,11 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                 </Card>
 
                 {/* Información sobre Usuario Automático */}
-                <Card className="border-[#b9f09e]/30 bg-[#b9f09e]/5">
+                <Card className="border-gray-900/30 bg-gray-100">
                     <CardHeader className="pb-4">
-                        <CardTitle className="text-[#2d524d] flex items-center gap-2 text-base md:text-lg">
-                            <div className="p-2 bg-[#2d524d] rounded-lg">
-                                <User className="h-4 w-4 md:h-5 md:w-5 text-[#b9f09e]" />
+                        <CardTitle className="text-gray-900 flex items-center gap-2 text-base md:text-lg">
+                            <div className="p-2 bg-gray-900 rounded-lg">
+                                <User className="h-4 w-4 md:h-5 md:w-5 text-white" />
                             </div>
                             Usuario Administrador Automático
                         </CardTitle>
@@ -364,29 +364,29 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                     <CardContent>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="space-y-3">
-                                <div className="flex items-center gap-2 text-xs md:text-sm text-[#2d524d]">
-                                    <div className="p-1.5 bg-[#2d524d] rounded-md">
-                                        <CheckCircle className="h-3 w-3 md:h-4 md:w-4 text-[#b9f09e]" />
+                                <div className="flex items-center gap-2 text-xs md:text-sm text-gray-900">
+                                    <div className="p-1.5 bg-gray-900 rounded-md">
+                                        <CheckCircle className="h-3 w-3 md:h-4 md:w-4 text-white" />
                                     </div>
                                     <span>Se creará automáticamente un administrador</span>
                                 </div>
-                                <div className="flex items-center gap-2 text-xs md:text-sm text-[#2d524d]">
-                                    <div className="p-1.5 bg-[#2d524d] rounded-md">
-                                        <CheckCircle className="h-3 w-3 md:h-4 md:w-4 text-[#b9f09e]" />
+                                <div className="flex items-center gap-2 text-xs md:text-sm text-gray-900">
+                                    <div className="p-1.5 bg-gray-900 rounded-md">
+                                        <CheckCircle className="h-3 w-3 md:h-4 md:w-4 text-white" />
                                     </div>
                                     <span>Email: {branchData.email || 'Email de la sucursal'}</span>
                                 </div>
                             </div>
                             <div className="space-y-3">
-                                <div className="flex items-center gap-2 text-xs md:text-sm text-[#2d524d]">
-                                    <div className="p-1.5 bg-[#2d524d] rounded-md">
-                                        <CheckCircle className="h-3 w-3 md:h-4 md:w-4 text-[#b9f09e]" />
+                                <div className="flex items-center gap-2 text-xs md:text-sm text-gray-900">
+                                    <div className="p-1.5 bg-gray-900 rounded-md">
+                                        <CheckCircle className="h-3 w-3 md:h-4 md:w-4 text-white" />
                                     </div>
                                     <span>Rol: Administrador de Sucursal</span>
                                 </div>
-                                <div className="flex items-center gap-2 text-xs md:text-sm text-[#2d524d]">
-                                    <div className="p-1.5 bg-[#2d524d] rounded-md">
-                                        <CheckCircle className="h-3 w-3 md:h-4 md:w-4 text-[#b9f09e]" />
+                                <div className="flex items-center gap-2 text-xs md:text-sm text-gray-900">
+                                    <div className="p-1.5 bg-gray-900 rounded-md">
+                                        <CheckCircle className="h-3 w-3 md:h-4 md:w-4 text-white" />
                                     </div>
                                     <span>Contraseña: <strong>Branch123!</strong> (Temporal se debe cambiar al acceder)</span>
                                 </div>
@@ -401,7 +401,7 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                         onClick={() => onBack()}
                         variant="outline"
                         size="lg"
-                        className="flex md:hidden gap-2 border-[#2d524d] text-[#2d524d] hover:bg-[#b9f09e]/20 hover:border-[#2d524d]"
+                        className="flex md:hidden gap-2 border-gray-900 text-gray-900 hover:bg-gray-100 hover:border-gray-900"
                     >
                         <ArrowLeft className="h-4 w-4" />
                         Volver
@@ -409,7 +409,7 @@ export const BranchesForm: React.FC<BranchesFormProps> = ({ onSuccess, onBack })
                     <Button
                         type="button"
                         onClick={handleShowModal}
-                        className="bg-[#2d524d] hover:bg-[#2d524d]/90 text-white cursor-pointer text-sm md:text-base px-6 md:px-8"
+                        className="bg-gray-900 hover:bg-gray-900/90 text-white cursor-pointer text-sm md:text-base px-6 md:px-8"
                         disabled={isLoading}
                     >
                         Crear Sucursal

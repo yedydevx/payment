@@ -21,9 +21,9 @@ export const DashboardTransactionStats: React.FC<DashboardTransactionStatsProps>
             total: totalTransactions,
             percentage: totalTransactions > 0 ? Math.round((totalSuccessful / totalTransactions) * 100) : 0,
             icon: CheckCircle,
-            iconBg: "bg-[#eef2ed]",
-            iconColor: "text-[#2d524d]",
-            valueColor: "text-[#2d524d]",
+            iconBg: "bg-gray-100",
+            iconColor: "text-gray-900",
+            valueColor: "text-gray-900",
         },
         {
             title: "Transacciones Pendientes",
@@ -31,9 +31,9 @@ export const DashboardTransactionStats: React.FC<DashboardTransactionStatsProps>
             total: totalTransactions,
             percentage: totalTransactions > 0 ? Math.round((totalPending / totalTransactions) * 100) : 0,
             icon: Clock,
-            iconBg: "bg-[#eef2ed]",
-            iconColor: "text-[#2d524d]",
-            valueColor: "text-[#2d524d]",
+            iconBg: "bg-gray-100",
+            iconColor: "text-gray-900",
+            valueColor: "text-gray-900",
         },
         {
             title: "Transacciones Fallidas",
@@ -41,9 +41,9 @@ export const DashboardTransactionStats: React.FC<DashboardTransactionStatsProps>
             total: totalTransactions,
             percentage: totalTransactions > 0 ? Math.round((totalFailed / totalTransactions) * 100) : 0,
             icon: XCircle,
-            iconBg: "bg-[#eef2ed]",
-            iconColor: "text-[#2d524d]",
-            valueColor: "text-[#2d524d]",
+            iconBg: "bg-gray-100",
+            iconColor: "text-gray-900",
+            valueColor: "text-gray-900",
         }
     ];
 

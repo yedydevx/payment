@@ -84,9 +84,9 @@ export const TransactionsModule = () => {
                                 placeholder="Buscar transacciones..."
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
-                                className="pl-10 pr-4 w-full rounded-full bg-[#eff0f0] text-[#2d524d] h-10"
+                                className="pl-10 pr-4 w-full rounded-full bg-gray-100 text-gray-900 h-10"
                             />
-                            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#2d524d] w-5 h-5" />
+                            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-900 w-5 h-5" />
                         </div>
 
                         {/* Filtro por categoría */}

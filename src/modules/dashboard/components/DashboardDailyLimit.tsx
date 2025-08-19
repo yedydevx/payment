@@ -23,7 +23,7 @@ export const DashboardDailyLimit: React.FC<DashboardDailyLimitProps> = ({
     const getProgressBarColor = (percentage: number) => {
         if (percentage >= 80) return 'bg-red-500'; // Rojo si está cerca del límite
         if (percentage >= 60) return 'bg-yellow-500'; // Amarillo si está en el medio
-        return 'bg-[#2d524d]'; // Verde oscuro si está bien
+        return 'bg-gray-900'; // Negro si está bien
     };
 
     // Formatear moneda
@@ -56,9 +56,9 @@ export const DashboardDailyLimit: React.FC<DashboardDailyLimitProps> = ({
                             {formatCurrency(dailyLimit)}
                         </span>
                     </div>
-                    <div className="w-16 text-center text-sm mt-4 bg-[#2d524d] rounded-full px-2 py-1 font-medium text-white">
-                        {spentPercentage.toFixed(1)}%
-                    </div>
+                                         <div className="w-16 text-center text-sm mt-4 bg-gray-900 rounded-full px-2 py-1 font-medium text-white">
+                         {spentPercentage.toFixed(1)}%
+                     </div>
                 </div>
 
                 {/* Barra de progreso */}

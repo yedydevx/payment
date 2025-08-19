@@ -38,7 +38,7 @@ export const DashboardTableRecient: React.FC<DashboardProps> = ({ transactions }
             case 'succesful':
             case 'success':
             case 'completed':
-                return ' text-[#2d524d] rounded-sm border border-gray-200';
+                return ' text-gray-900 rounded-sm border border-gray-200';
             case 'pending':
                 return 'text-yellow-600  rounded-sm border border-gray-200';
             case 'failed':
@@ -71,12 +71,12 @@ export const DashboardTableRecient: React.FC<DashboardProps> = ({ transactions }
     return (
         <Card className="w-full bg-white rounded-lg border border-gray-200 shadow-sm">
             <div className="flex justify-between p-3 items-center">
-                <div className="text-base font-semibold text-[#2d524d]">
+                <div className="text-base font-semibold text-gray-900">
                     Transacciones Recientes
                 </div>
                 <Button
                     size="sm"
-                    className="text-white  font-medium text-xs bg-[#2d524d] rounded-sm cursor-pointer"
+                    className="text-white  font-medium text-xs bg-gray-900 rounded-sm cursor-pointer"
                     onClick={() => navigate('/transacciones')}
                 >
                     Ver todas
@@ -88,19 +88,19 @@ export const DashboardTableRecient: React.FC<DashboardProps> = ({ transactions }
                         {/* Header de la tabla */}
                         <thead>
                             <tr className="border-b border-gray-200">
-                                <th className="text-left py-2 px-3 font-normal text-gray-700 bg-[#eef2ed] text-xs">
+                                <th className="text-left py-2 px-3 font-normal text-gray-700 bg-gray-100 text-xs">
                                     Transacción
                                 </th>
-                                <th className="text-left py-2 px-3 font-normal text-gray-700 bg-[#eef2ed] text-xs">
+                                <th className="text-left py-2 px-3 font-normal text-gray-700 bg-gray-100 text-xs">
                                     Fecha
                                 </th>
-                                <th className="text-left py-2 px-3 font-normal text-gray-700 bg-[#eef2ed] text-xs">
+                                <th className="text-left py-2 px-3 font-normal text-gray-700 bg-gray-100 text-xs">
                                     Monto
                                 </th>
-                                <th className="text-left py-2 px-3 font-normal text-gray-700 bg-[#eef2ed] text-xs w-20">
+                                <th className="text-left py-2 px-3 font-normal text-gray-700 bg-gray-100 text-xs w-20">
                                     Nota
                                 </th>
-                                <th className="text-left py-2 px-3 font-normal text-gray-700 bg-[#eef2ed] text-xs">
+                                <th className="text-left py-2 px-3 font-normal text-gray-700 bg-gray-100 text-xs">
                                     Estado
                                 </th>
                             </tr>

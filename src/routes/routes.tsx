@@ -9,41 +9,41 @@ import { DashboardModule } from "@/modules/dashboard/pages/dashboard.module";
 import { BranchesListPage } from "@/modules/branches/pages/branches-list.page";
 import { BranchesFormPage } from "@/modules/branches/pages/branches-form.page";
 import { TransactionsModule } from "@/modules/transactions/pages/transactions.modules";
-import { IncomeModule } from "@/modules/payments/income/pages/income.module";
-import { ExpensesModule } from "@/modules/payments/expenses/pages/expenses.module";
+// import { IncomeModule } from "@/modules/payments/income/pages/income.module";
+// import { ExpensesModule } from "@/modules/payments/expenses/pages/expenses.module";
 
 export const modules: ModuleConfig[] = [
     {
-        path: "transacciones",
-        roles: ['SUPER_ADMIN', 'ADMIN'],
-        requireAll: false,
-        element: <TransactionsModule />,
-        children: []
+        path: "transacciones", // ruta del módulo
+        roles: ['SUPER_ADMIN', 'ADMIN', 'BRANCH_ADMIN', 'BRANCH_USER', 'CASHIER', 'ACCOUNTANT'], // todos los roles pueden ver transacciones
+        requireAll: false, // si se requiere que todos los roles sean cumplidos para acceder al módulo
+        element: <TransactionsModule />, // componente del módulo
+        children: [] // hijos del módulo
     },
     {
         path: "sucursales",
-        roles: ['SUPER_ADMIN', 'ADMIN'],
+        roles: ['SUPER_ADMIN', 'ADMIN'], // solo organizadores pueden gestionar sucursales
         requireAll: false,
         element: <BranchesModule />,
         children: [
             { index: true, element: <BranchesListPage /> },
             { path: "create", element: <BranchesFormPage onBack={() => {}} onSuccess={() => {}} /> },
         ]
-    },
-    {
-        path: "ingresos",
-        roles: ['SUPER_ADMIN', 'ADMIN'],
-        requireAll: false,
-        element: <IncomeModule />,
-        children: []
-    },
-    {
-        path: "egresos",
-        roles: ['SUPER_ADMIN', 'ADMIN'],
-        requireAll: false,
-        element: <ExpensesModule />,
-        children: []
-    },
+    }
+    // {
+    //     path: "ingresos",
+    //     roles: ['SUPER_ADMIN', 'ADMIN'],
+    //     requireAll: false,
+    //     element: <IncomeModule />,
+    //     children: []
+    // },
+    // {
+    //     path: "egresos",
+    //     roles: ['SUPER_ADMIN', 'ADMIN'],
+    //     requireAll: false,
+    //     element: <ExpensesModule />,
+    //     children: []
+    // },
 ];
 
 // Convertir módulos a rutas

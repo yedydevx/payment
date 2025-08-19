@@ -15,14 +15,14 @@ export const getTransactionColumns = (): BaseColumn<Transaction>[] => [
                 if (category?.toLowerCase().includes('diezmo')) {
                     return {
                         icon: Church,
-                        bgColor: 'bg-[#b9f09e]',
-                        iconColor: 'text-[#2d524d]'
+                        bgColor: 'bg-gray-900',
+                        iconColor: 'text-white'
                     };
                 } else if (category?.toLowerCase().includes('donacion')) {
                     return {
                         icon: DollarSign,
-                        bgColor: 'bg-[#b9f09e]',
-                        iconColor: 'text-[#2d524d]'
+                        bgColor: 'bg-gray-900',
+                        iconColor: 'text-white'
                     };
                 } else {
                     return {
@@ -71,33 +71,33 @@ export const getTransactionColumns = (): BaseColumn<Transaction>[] => [
                     return {
                         icon: (
                             <div className="w-10 h-6 bg-white border border-gray-300 rounded-sm flex items-center justify-center">
-                                <div className="w-3 h-3 bg-[#b9f09e] rounded-full"></div>
-                                <div className="w-3 h-3 bg-[#2d524d] rounded-full"></div>
+                                <div className="w-3 h-3 bg-gray-900 rounded-full"></div>
+                                <div className="w-3 h-3 bg-gray-600 rounded-full"></div>
                             </div>
                         ),
                         label: 'Tarjeta de Crédito',
-                        textColor: 'text-[#2d524d]'
+                        textColor: 'text-gray-900'
                     };
                 } else if (method === 'DEBIT_CARD') {
                     return {
                         icon: (
                             <div className="w-10 h-6 bg-white border border-gray-300 rounded-sm flex items-center justify-center">
-                                <div className="w-3 h-3 bg-[#b9f09e] rounded-full"></div>
-                                <div className="w-3 h-3 bg-[#2d524d] rounded-full"></div>
+                                <div className="w-3 h-3 bg-gray-900 rounded-full"></div>
+                                <div className="w-3 h-3 bg-gray-600 rounded-full"></div>
                             </div>
                         ),
                         label: 'Tarjeta de Débito',
-                        textColor: 'text-[#2d524d]'
+                        textColor: 'text-gray-900'
                     };
                 } else if (method === 'PSE') {
                     return {
                         icon: (
-                            <div className="w-10 h-6  rounded-sm flex items-center justify-center border border-[#2d524d]">
-                                <span className="text-[14px] font-normal text-[#2d524d]">PSE</span>
+                            <div className="w-10 h-6  rounded-sm flex items-center justify-center border border-gray-900">
+                                <span className="text-[14px] font-normal text-gray-900">PSE</span>
                             </div>
                         ),
                         label: 'PSE',
-                        textColor: 'text-[#2d524d]'
+                        textColor: 'text-gray-900'
                     };
                 } else {
                     return {
@@ -136,7 +136,7 @@ export const getTransactionColumns = (): BaseColumn<Transaction>[] => [
         cell: ({ row }) => {
             const id = row.original.payment?.id as number | undefined
             return (
-                <span className="font-normal text-md text-[#2d524d]" title={id?.toString() || ''}>
+                <span className="font-normal text-md text-gray-900" title={id?.toString() || ''}>
                     {typeof id === 'number' ? id : 'N/A'}
                 </span>
             )
@@ -295,28 +295,28 @@ export const getTransactionColumns = (): BaseColumn<Transaction>[] => [
             const status = row.getValue("status") as string;
             const statusConfig: Record<string, { bgColor: string, textColor: string, label: string }> = {
                 PENDING: {
-                    bgColor: 'bg-[#b9f09e]',
-                    textColor: 'text-[#2d524d]',
+                    bgColor: 'bg-gray-100',
+                    textColor: 'text-gray-900',
                     label: 'Pendiente'
                 },
                 COMPLETED: {
-                    bgColor: 'bg-[#2d524d]',
-                    textColor: 'text-[#b9f09e]',
+                    bgColor: 'bg-gray-900',
+                    textColor: 'text-white',
                     label: 'Completado'
                 },
                 SUCCESSFUL: {
-                    bgColor: 'bg-[#2d524d]',
-                    textColor: 'text-[#b9f09e]',
+                    bgColor: 'bg-gray-900',
+                    textColor: 'text-white',
                     label: 'Exitoso'
                 },
                 SUCCESS: {
-                    bgColor: 'bg-[#2d524d]',
-                    textColor: 'text-[#b9f09e]',
+                    bgColor: 'bg-gray-900',
+                    textColor: 'text-white',
                     label: 'Exitoso'
                 },
                 SUCCESFUL: {
-                    bgColor: 'bg-[#2d524d]',
-                    textColor: 'text-[#b9f09e]',
+                    bgColor: 'bg-gray-900',
+                    textColor: 'text-white',
                     label: 'Exitoso'
                 },
                 FAILED: {

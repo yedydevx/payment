@@ -16,8 +16,8 @@
 //         <Card className="w-full">
 //             <CardHeader className="pb-2">
 //                 <CardTitle className="flex items-center gap-2 text-xl font-semibold">
-//                     <div className="p-2 bg-[#2d524d] rounded-lg">
-//                         <Church className="h-4 w-4 text-[#b9f09e]" />
+//                     <div className="p-2 bg-gray-900 rounded-lg">
+//                         <Church className="h-4 w-4 text-white" />
 //                     </div>
 //                     Categorías de Recaudo
 //                 </CardTitle>
@@ -33,7 +33,7 @@
 //                     {/* Información adicional */}
 //                     <div className="text-center mb-3">
 //                         <div className="text-sm text-gray-600">Total Recaudado</div>
-//                         <div className="text-lg font-bold text-[#2d524d]">
+//                         <div className="text-lg font-bold text-gray-900">
 //                             ${totalAmount.toLocaleString('es-CO')}
 //                         </div>
 //                         {mostPaidCategory && (

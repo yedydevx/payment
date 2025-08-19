@@ -14,11 +14,11 @@ export const BranchesSummaryForm: React.FC<BranchesSummaryFormProps> = ({
     return (
         <div className="space-y-6 md:space-y-8">
             {/* Información Básica */}
-            <Card className="border-gray-200 hover:border-[#b9f09e]/30 transition-colors">
+            <Card className="border-gray-200 hover:border-gray-900/30 transition-colors">
                 <CardHeader className="pb-4">
-                    <CardTitle className="flex items-center gap-2 text-base md:text-lg text-[#2d524d]">
-                        <div className="p-2 bg-[#2d524d] rounded-lg">
-                            <Building2 className="h-4 w-4 md:h-5 md:w-5 text-[#b9f09e]" />
+                    <CardTitle className="flex items-center gap-2 text-base md:text-lg text-gray-900">
+                        <div className="p-2 bg-gray-900 rounded-lg">
+                            <Building2 className="h-4 w-4 md:h-5 md:w-5 text-white" />
                         </div>
                         Información Básica
                     </CardTitle>
@@ -41,11 +41,11 @@ export const BranchesSummaryForm: React.FC<BranchesSummaryFormProps> = ({
             </Card>
 
             {/* Información de Contacto */}
-            <Card className="border-gray-200 hover:border-[#b9f09e]/30 transition-colors">
+            <Card className="border-gray-200 hover:border-gray-900/30 transition-colors">
                 <CardHeader className="pb-4">
-                    <CardTitle className="flex items-center gap-2 text-base md:text-lg text-[#2d524d]">
-                        <div className="p-2 bg-[#2d524d] rounded-lg">
-                            <Mail className="h-4 w-4 md:h-5 md:w-5 text-[#b9f09e]" />
+                    <CardTitle className="flex items-center gap-2 text-base md:text-lg text-gray-900">
+                        <div className="p-2 bg-gray-900 rounded-lg">
+                            <Mail className="h-4 w-4 md:h-5 md:w-5 text-white" />
                         </div>
                         Información de Contacto
                     </CardTitle>
@@ -65,11 +65,11 @@ export const BranchesSummaryForm: React.FC<BranchesSummaryFormProps> = ({
             </Card>
 
             {/* Información de Ubicación */}
-            <Card className="border-gray-200 hover:border-[#b9f09e]/30 transition-colors">
+            <Card className="border-gray-200 hover:border-gray-900/30 transition-colors">
                 <CardHeader className="pb-4">
-                    <CardTitle className="flex items-center gap-2 text-base md:text-lg text-[#2d524d]">
-                        <div className="p-2 bg-[#2d524d] rounded-lg">
-                            <MapPin className="h-4 w-4 md:h-5 md:w-5 text-[#b9f09e]" />
+                    <CardTitle className="flex items-center gap-2 text-base md:text-lg text-gray-900">
+                        <div className="p-2 bg-gray-900 rounded-lg">
+                            <MapPin className="h-4 w-4 md:h-5 md:w-5 text-white" />
                         </div>
                         Información de Ubicación
                     </CardTitle>
@@ -108,11 +108,11 @@ export const BranchesSummaryForm: React.FC<BranchesSummaryFormProps> = ({
 
             {/* Cuenta de Cobro */}
             {accountData && (
-                <Card className="border-gray-200 hover:border-[#b9f09e]/30 transition-colors">
+                <Card className="border-gray-200 hover:border-gray-900/30 transition-colors">
                     <CardHeader className="pb-4">
-                        <CardTitle className="flex items-center gap-2 text-base md:text-lg text-[#2d524d]">
-                            <div className="p-2 bg-[#2d524d] rounded-lg">
-                                <CreditCard className="h-4 w-4 md:h-5 md:w-5 text-[#b9f09e]" />
+                        <CardTitle className="flex items-center gap-2 text-base md:text-lg text-gray-900">
+                            <div className="p-2 bg-gray-900 rounded-lg">
+                                <CreditCard className="h-4 w-4 md:h-5 md:w-5 text-white" />
                             </div>
                             Cuenta de Cobro
                         </CardTitle>
@@ -157,11 +157,11 @@ export const BranchesSummaryForm: React.FC<BranchesSummaryFormProps> = ({
             )}
 
             {/* Usuario Administrador */}
-            <Card className="border-[#b9f09e]/30 bg-[#b9f09e]/5">
+            <Card className="border-gray-900/30 bg-gray-100">
                 <CardHeader className="pb-4">
-                    <CardTitle className="flex items-center gap-2 text-base md:text-lg text-[#2d524d]">
-                        <div className="p-2 bg-[#2d524d] rounded-lg">
-                            <User className="h-4 w-4 md:h-5 md:w-5 text-[#b9f09e]" />
+                    <CardTitle className="flex items-center gap-2 text-base md:text-lg text-gray-900">
+                        <div className="p-2 bg-gray-900 rounded-lg">
+                            <User className="h-4 w-4 md:h-5 md:w-5 text-white" />
                         </div>
                         Usuario Administrador (Automático)
                     </CardTitle>
@@ -170,22 +170,22 @@ export const BranchesSummaryForm: React.FC<BranchesSummaryFormProps> = ({
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                         <div className="space-y-3">
                             <div className="space-y-2">
-                                <span className="text-xs md:text-sm text-[#2d524d] font-medium">Nombre</span>
-                                <p className="font-semibold text-[#2d524d] text-sm md:text-base">{formData.name}</p>
+                                <span className="text-xs md:text-sm text-gray-900 font-medium">Nombre</span>
+                                <p className="font-semibold text-gray-900 text-sm md:text-base">{formData.name}</p>
                             </div>
                             <div className="space-y-2">
-                                <span className="text-xs md:text-sm text-[#2d524d] font-medium">Email de acceso</span>
-                                <p className="font-semibold text-[#2d524d] text-sm md:text-base">{formData.email || 'Se asignará automáticamente'}</p>
+                                <span className="text-xs md:text-sm text-gray-900 font-medium">Email de acceso</span>
+                                <p className="font-semibold text-gray-900 text-sm md:text-base">{formData.email || 'Se asignará automáticamente'}</p>
                             </div>
                         </div>
                         <div className="space-y-3">
                             <div className="space-y-2">
-                                <span className="text-xs md:text-sm text-[#2d524d] font-medium">Rol</span>
-                                <p className="font-semibold text-[#2d524d] text-sm md:text-base">Administrador de Sucursal</p>
+                                <span className="text-xs md:text-sm text-gray-900 font-medium">Rol</span>
+                                <p className="font-semibold text-gray-900 text-sm md:text-base">Administrador de Sucursal</p>
                             </div>
                             <div className="space-y-2">
-                                <span className="text-xs md:text-sm text-[#2d524d] font-medium">Contraseña temporal</span>
-                                <p className="font-semibold text-[#2d524d] text-sm md:text-base">Branch123!</p>
+                                <span className="text-xs md:text-sm text-gray-900 font-medium">Contraseña temporal</span>
+                                <p className="font-semibold text-gray-900 text-sm md:text-base">Branch123!</p>
                             </div>
                         </div>
                     </div>
@@ -193,20 +193,20 @@ export const BranchesSummaryForm: React.FC<BranchesSummaryFormProps> = ({
             </Card>
 
             {/* Información Importante */}
-            <Card className="border-[#b9f09e]/30 bg-[#b9f09e]/10">
+            <Card className="border-gray-900/30 bg-gray-100">
                 <CardHeader className="pb-4">
-                    <div className="flex items-center gap-2 text-[#2d524d]">
-                        <div className="p-2 bg-[#2d524d] rounded-lg">
-                            <Info className="h-4 w-4 md:h-5 md:w-5 text-[#b9f09e]" />
+                    <div className="flex items-center gap-2 text-gray-900">
+                        <div className="p-2 bg-gray-900 rounded-lg">
+                            <Info className="h-4 w-4 md:h-5 md:w-5 text-white" />
                         </div>
                         <h3 className="text-base md:text-lg font-bold">Información Importante</h3>
                     </div>
                 </CardHeader>
                 <CardContent>
-                    <div className="text-xs md:text-sm text-[#2d524d] space-y-3">
+                    <div className="text-xs md:text-sm text-gray-900 space-y-3">
                         <div className="flex items-start gap-2">
-                            <div className="p-1.5 bg-[#2d524d] rounded-md">
-                                <Shield className="h-3 w-3 md:h-4 md:w-4 text-[#b9f09e] mt-0.5 flex-shrink-0" />
+                            <div className="p-1.5 bg-gray-900 rounded-md">
+                                <Shield className="h-3 w-3 md:h-4 md:w-4 text-white mt-0.5 flex-shrink-0" />
                             </div>
                             <p>
                                 Al confirmar se creará la sucursal y automáticamente un usuario administrador
@@ -214,8 +214,8 @@ export const BranchesSummaryForm: React.FC<BranchesSummaryFormProps> = ({
                             </p>
                         </div>
                         <div className="flex items-start gap-2">
-                            <div className="p-1.5 bg-[#2d524d] rounded-md">
-                                <Key className="h-3 w-3 md:h-4 md:w-4 text-[#b9f09e] mt-0.5 flex-shrink-0" />
+                            <div className="p-1.5 bg-gray-900 rounded-md">
+                                <Key className="h-3 w-3 md:h-4 md:w-4 text-white mt-0.5 flex-shrink-0" />
                             </div>
                             <p>
                                 Se recomienda que el administrador cambie la contraseña en el primer acceso.
@@ -240,7 +240,7 @@ export const BranchesSummaryForm: React.FC<BranchesSummaryFormProps> = ({
                     type="button"
                     onClick={onConfirm}
                     disabled={isLoading}
-                    className="bg-[#2d524d] hover:bg-[#2d524d]/90 text-white min-w-[120px] text-sm md:text-base"
+                    className="bg-gray-900 hover:bg-gray-900/90 text-white min-w-[120px] text-sm md:text-base"
                 >
                     {isLoading ? (
                         <div className="flex items-center gap-2">

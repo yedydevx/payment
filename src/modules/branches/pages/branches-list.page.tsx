@@ -62,7 +62,7 @@ export const BranchesPage = () => {
                 {/* Stats Cards */}
                 <div className="flex flex-col md:flex-row gap-4">
                     {/* Carta Sede Principal */}
-                    <div className="w-full bg-[#1e4841] p-6 rounded-2xl  shadow-lg">
+                    <div className="w-full bg-gray-900 p-6 rounded-2xl  shadow-lg">
                         <div className="flex items-center justify-between">
                             <div>
                                 <p className="text-sm font-medium text-white/80 mb-1">Sede Principal</p>
@@ -70,14 +70,14 @@ export const BranchesPage = () => {
                                     {organizationName}
                                 </p>
                             </div>
-                            <div className="p-3 bg-[#b9f09e] rounded-xl border border-[#2d524d]">
-                                <Building2 className="h-6 w-6 text-[#2d524d]" />
+                            <div className="p-3 bg-gray-700 rounded-xl border border-gray-900">
+                                <Building2 className="h-6 w-6 text-white" />
                             </div>
                         </div>
                     </div>
 
                     {/* Carta Total Sucursales */}
-                    <div className="w-full bg-[#1e4841] p-6 rounded-2xl  shadow-lg">
+                    <div className="w-full bg-gray-900 p-6 rounded-2xl  shadow-lg">
                         {/* Elementos decorativos */}
                         <div className=" flex items-center justify-between">
                             <div>
@@ -90,8 +90,8 @@ export const BranchesPage = () => {
                                     )}
                                 </p>
                             </div>
-                            <div className="p-3 bg-[#b9f09e] rounded-xl border border-[#2d524d]">
-                                <Building2 className="h-6 w-6 text-[#2d524d]" />
+                            <div className="p-3 bg-gray-700 rounded-xl border border-gray-900">
+                                <Building2 className="h-6 w-6 text-white" />
                             </div>
                         </div>
                     </div>
@@ -107,7 +107,7 @@ export const BranchesPage = () => {
                         <Button
                             onClick={handleCreateBranch}
                             size="lg"
-                            className="bg-[#2d524d] hover:bg-[#2d524d]/80 text-white gap-2 cursor-pointer"
+                            className="bg-gray-900 hover:bg-gray-900/80 text-white gap-2 cursor-pointer"
                         >
                             <Plus className="h-4 w-4" />
                             <span className="hidden md:block">Nueva Sucursal</span>

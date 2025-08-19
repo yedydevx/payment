@@ -14,7 +14,7 @@ export const DashboardSimpleRevenueChart = ({ className, transactions }: Dashboa
                 </div>
                 <div className="flex items-center gap-2">
                     <span className="text-xs text-gray-600">Últimos 6 meses</span>
-                    <div className="w-2 h-2 bg-[#2d524d] rounded-full"></div>
+                    <div className="w-2 h-2 bg-gray-900 rounded-full"></div>
                 </div>
             </div>
 
@@ -51,7 +51,7 @@ export const DashboardSimpleRevenueChart = ({ className, transactions }: Dashboa
                         />
                         <Bar
                             dataKey="uv"
-                            fill="url(#greenGradient)"
+                            fill="url(#blueGradient)"
                             radius={[4, 4, 0, 0]}
                             stroke="none"
                         />
@@ -59,12 +59,12 @@ export const DashboardSimpleRevenueChart = ({ className, transactions }: Dashboa
                 </ResponsiveContainer>
             </div>
 
-            {/* Definición del gradiente verde para las barras */}
+            {/* Definición del gradiente azul para las barras */}
             <svg width="0" height="0">
                 <defs>
-                    <linearGradient id="greenGradient" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor="#b9f09e" />
-                        <stop offset="100%" stopColor="#2d524d" />
+                    <linearGradient id="blueGradient" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor="#6b7280" />
+                        <stop offset="100%" stopColor="#374151" />
                     </linearGradient>
                 </defs>
             </svg>

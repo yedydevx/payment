@@ -40,14 +40,14 @@ export const useDashboardCategoriesChart = (transactions: Transaction[]) => {
             // Buscar coincidencias parciales (ignorar mayúsculas/minúsculas)
             const categoryLower = category.toLowerCase();
             if (categoryLower.includes('diezmo') || categoryLower.includes('diezmos')) {
-                color = '#2d524d'; // Verde oscuro
+                color = '#374151'; // Negro
             } else if (categoryLower.includes('donacion') || categoryLower.includes('donaciones')) {
-                color = '#b9f09e'; // Verde fuerte
+                color = '#6b7280'; // Gris
             } else if (categoryLower.includes('otro') || categoryLower.includes('otros')) {
-                color = '#eef2ed'; // Verde claro
+                color = '#e5e7eb'; // Gris claro
             } else {
                 // Si no hay coincidencia, usar colores por defecto
-                const defaultColors = ['#2d524d', '#b9f09e', '#eef2ed'];
+                const defaultColors = ['#374151', '#6b7280', '#e5e7eb'];
                 color = defaultColors[categoriesList.length % defaultColors.length];
             }
 
@@ -63,7 +63,7 @@ export const useDashboardCategoriesChart = (transactions: Transaction[]) => {
         return categoriesList.sort((a, b) => b.percentage - a.percentage);
     }, [transactions]);
 
-    // Crear el SVG de la gráfica de dona mejorada con colores vibrantes
+    // Crear el SVG de la gráfica de dona mejorada con colores azules
     const createDonutChart = (size: number = 160) => {
         if (categories.length === 0) return null;
 
@@ -74,8 +74,8 @@ export const useDashboardCategoriesChart = (transactions: Transaction[]) => {
         let currentAngle = -90; // Empezar desde arriba
         const paths: React.ReactElement[] = [];
 
-        // Asegurar que siempre tengamos al menos 2 colores verdes
-        const defaultColors = ['#2d524d', '#b9f09e']; // Verde oscuro y verde claro
+        // Asegurar que siempre tengamos al menos 2 colores elegantes
+        const defaultColors = ['#374151', '#6b7280']; // Negro y gris
 
         categories.forEach((category, index) => {
             const angle = (category.percentage / 100) * 360;

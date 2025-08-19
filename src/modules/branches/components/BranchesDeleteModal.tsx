@@ -25,8 +25,8 @@ export const BranchesDeleteModal: React.FC<DeleteBranchModalProps> = ({
             <div className="space-y-6">
                 {/* Icono de advertencia */}
                 <div className="flex justify-center">
-                    <div className="w-16 h-16 bg-[#b9f09e]/20 rounded-full flex items-center justify-center">
-                        <AlertTriangle className="w-8 h-8 text-[#2d524d]" />
+                    <div className="w-16 h-16 bg-gray-900/20 rounded-full flex items-center justify-center">
+                        <AlertTriangle className="w-8 h-8 text-gray-900" />
                     </div>
                 </div>
 
@@ -52,7 +52,7 @@ export const BranchesDeleteModal: React.FC<DeleteBranchModalProps> = ({
                     <Button
                         onClick={() => onConfirm()}
                         disabled={loading}
-                        className='bg-[#2d524d] text-white hover:bg-[#2d524d]/90'
+                        className='bg-gray-900 text-white hover:bg-gray-900/90'
                     >
                         {loading ? 'Eliminando...' : 'Eliminar Sucursal'}
                     </Button>

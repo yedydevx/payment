@@ -3,12 +3,12 @@
 // import { Transaction } from '@/modules/transactions/types/transactions.types';
 
 // export const useDashboardPaymentMethodsChart = (transactions: Transaction[]) => {
-//     // Colores para las categorías de recaudo usando nuestros 3 tonos verdes
+//     // Colores para las categorías de recaudo usando nuestro esquema elegante
 //     const CATEGORY_COLORS = {
-//         'Diezmos': '#2d524d',        // Verde oscuro (principal)
-//         'Donaciones': '#b9f09e',      // Verde claro
-//         'Otros': '#8bc34a',          // Verde intermedio
-//         'N/A': '#6b7280'             // Gris para N/A
+//         'Diezmos': '#374151',        // Negro (principal)
+//         'Donaciones': '#6b7280',      // Gris
+//         'Otros': '#e5e7eb',          // Gris claro
+//         'N/A': '#9ca3af'             // Gris para N/A
 //     };
 
 //     // Etiquetas para las categorías de recaudo

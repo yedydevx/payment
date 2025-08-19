@@ -25,8 +25,8 @@ export const BranchesViewModal: React.FC<ViewBranchModalProps> = ({
             <div className="space-y-8">
                 {/* Sede Parroquial - Header principal */}
                 <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-xl border border-gray-100">
-                    <div className="p-3 bg-[#b9f09e] rounded-xl flex-shrink-0 hidden md:block">
-                        <Building className="h-8 w-8 text-[#2d524d] " />
+                    <div className="p-3 bg-gray-900 rounded-xl flex-shrink-0 hidden md:block">
+                        <Building className="h-8 w-8 text-white " />
                     </div>
                     <div className="flex-1 min-w-0">
                         <h3 className="text-2xl font-bold text-gray-900 mb-2">{branch.name}</h3>
@@ -40,7 +40,7 @@ export const BranchesViewModal: React.FC<ViewBranchModalProps> = ({
                 <div className="space-y-6">
                     <div className="flex items-center gap-3 pb-3 border-b border-gray-200">
                         <div className="p-2 bg-gray-100 rounded-lg">
-                            <Mail className="h-5 w-5 text-[#2d524d]" />
+                            <Mail className="h-5 w-5 text-gray-900" />
                         </div>
                         <h4 className="text-lg font-bold text-gray-900">Información de Contacto</h4>
                     </div>
@@ -69,7 +69,7 @@ export const BranchesViewModal: React.FC<ViewBranchModalProps> = ({
                 <div className="space-y-6">
                     <div className="flex items-center gap-3 pb-3 border-b border-gray-200">
                         <div className="p-2 bg-gray-100 rounded-lg">
-                            <MapPin className="h-5 w-5 text-[#2d524d]" />
+                            <MapPin className="h-5 w-5 text-gray-900" />
                         </div>
                         <h4 className="text-lg font-bold text-gray-900">Ubicación</h4>
                     </div>
@@ -113,7 +113,7 @@ export const BranchesViewModal: React.FC<ViewBranchModalProps> = ({
                 <div className="space-y-6">
                     <div className="flex items-center gap-3 pb-3 border-b border-gray-200">
                         <div className="p-2 bg-gray-100 rounded-lg">
-                            <CreditCard className="h-5 w-5 text-[#2d524d]" />
+                            <CreditCard className="h-5 w-5 text-gray-900" />
                         </div>
                         <h4 className="text-lg font-bold text-gray-900">Cuenta de Cobro</h4>
                     </div>
@@ -140,7 +140,7 @@ export const BranchesViewModal: React.FC<ViewBranchModalProps> = ({
                             </div>
                             <div className="flex items-center gap-3 pt-2">
                                 <span className="text-sm font-medium text-gray-600 min-w-[80px]">Tipo:</span>
-                                <span className="px-3 py-1.5 rounded-full text-sm font-medium bg-[#b9f09e] text-[#2d524d]">
+                                <span className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 text-gray-900">
                                     {(() => {
                                         const accountType = branch.paymentAccounts[0].type;
                                         switch (accountType) {
@@ -170,7 +170,7 @@ export const BranchesViewModal: React.FC<ViewBranchModalProps> = ({
                 <div className="pt-6 border-t border-gray-200">
                     <div className="flex items-center gap-3">
                         <div className="p-2 bg-gray-100 rounded-lg">
-                            <Calendar className="h-5 w-5 text-[#2d524d]" />
+                            <Calendar className="h-5 w-5 text-gray-900" />
                         </div>
                         <span className="text-sm font-medium text-gray-600">Fecha de creación:</span>
                         <span className="text-gray-900 font-medium">

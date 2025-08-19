@@ -10,14 +10,14 @@ export const DashboardCategoriesChart: React.FC<DashboardProps> = ({ transaction
     return (
         <div className="p-4 rounded-lg border border-gray-200">
             {/* Header con título y selector */}
-                    <h3 className="text-lg font-semibold text-[#2d524d]">Estadísticas</h3>
+                                         <h3 className="text-lg font-semibold text-gray-900">Estadísticas</h3>
 
             {/* Total destacado */}
             <div className="text-center flex items-center gap-2 py-2">
                 <p className="text-md text-gray-600">Total:</p>
-                <div className="text-md font-bold text-[#2d524d]">
-                    ${totalAmount.toLocaleString()}
-                </div>
+                                     <div className="text-md font-bold text-gray-900">
+                         ${totalAmount.toLocaleString()}
+                     </div>
             </div>
 
             {/* Gráfico de dona */}

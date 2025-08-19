@@ -71,14 +71,14 @@ export const LayoutModules = ({ active, handleActive, id, name, icon, subMenu }:
                 onClick={handleClick}
                 className={`group flex items-center gap-3 p-2 md:p-3 rounded-full md:rounded-2xl cursor-pointer transition-all duration-200 justify-center text-lg ${
                     isCurrentItemActive
-                        ? 'bg-[#b9f09e] text-[#2d524d] shadow-sm'
-                        : 'hover:bg-gray-100 text-gray-700 hover:text-gray-900'
+                        ? 'bg-gray-900 text-white shadow-sm'
+                        : 'hover:bg-gray-200 text-gray-700 hover:text-gray-900'
                 }`}
             >
                 {/* Icono del módulo */}
                 <div className={`flex-shrink-0 transition-all duration-200 flex items-center justify-center ${
                     isCurrentItemActive
-                        ? 'text-[#2d524d]'
+                        ? 'text-white'
                         : 'text-gray-600 group-hover:text-gray-700'
                 }`}>
                     <div className="w-7 h-7 flex items-center justify-center">
@@ -88,7 +88,7 @@ export const LayoutModules = ({ active, handleActive, id, name, icon, subMenu }:
 
                 {/* Nombre del módulo - solo visible en móvil y desktop */}
                 <span className={`font-medium text-sm transition-colors duration-200 flex-1 md:hidden lg:block ${
-                    isCurrentItemActive ? 'text-[#2d524d]' : 'text-gray-700 group-hover:text-gray-900'
+                    isCurrentItemActive ? 'text-white' : 'text-gray-700 group-hover:text-gray-900'
                 }`}>
                     {name}
                 </span>
@@ -97,7 +97,7 @@ export const LayoutModules = ({ active, handleActive, id, name, icon, subMenu }:
                     <ChevronRight
                         size={18}
                         className={`flex-shrink-0 transition-all duration-200 md:hidden lg:block ${
-                            isSubMenuOpen ? 'rotate-90 text-[#2d524d]' : 'rotate-0 text-gray-400 group-hover:text-gray-600'
+                            isSubMenuOpen ? 'rotate-90 text-gray-900' : 'rotate-0 text-gray-400 group-hover:text-gray-600'
                         }`}
                     />
                 )}
@@ -147,14 +147,14 @@ export const LayoutModules = ({ active, handleActive, id, name, icon, subMenu }:
                             onClick={() => handleSubMenuClick(subItem)}
                             className={`group flex items-center gap-3 p-2 md:p-3 rounded-full md:rounded-2xl cursor-pointer transition-all duration-200 justify-center text-lg ${
                                 active === subItem.id
-                                    ? 'bg-[#b9f09e] text-[#2d524d] shadow-sm'
-                                    : 'hover:bg-gray-100 text-gray-700 hover:text-gray-900'
+                                    ? 'bg-gray-900 text-white shadow-sm'
+                                    : 'hover:bg-gray-200 text-gray-700 hover:text-gray-900'
                             }`}
                         >
                             {/* Icono del submódulo */}
                             <div className={`flex-shrink-0 transition-all duration-200 flex items-center justify-center ${
                                 active === subItem.id
-                                    ? 'text-[#2d524d]'
+                                    ? 'text-white'
                                     : 'text-gray-600 group-hover:text-gray-700'
                             }`}>
                                 <div className="w-5 h-5 flex items-center justify-center">
@@ -163,7 +163,7 @@ export const LayoutModules = ({ active, handleActive, id, name, icon, subMenu }:
                             </div>
 
                             <span className={`font-medium text-sm transition-colors duration-200 flex-1 md:hidden lg:block ${
-                                active === subItem.id ? 'text-[#2d524d]' : 'text-gray-700 group-hover:text-gray-900'
+                                active === subItem.id ? 'text-white' : 'text-gray-700 group-hover:text-gray-900'
                             }`}>
                                 {subItem.name}
                             </span>

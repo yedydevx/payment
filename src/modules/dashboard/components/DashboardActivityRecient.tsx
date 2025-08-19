@@ -72,8 +72,8 @@ export const DashboardActivityRecient: React.FC<DashboardActivityRecientProps> =
                             {/* Timeline y nodo */}
                             <div className="relative flex flex-col items-center">
                                 {/* Nodo de actividad */}
-                                <div className="w-8 h-8 bg-[#b9f09e] rounded-full flex-shrink-0 flex items-center justify-center">
-                                    <User className="w-5 h-5 text-[#2d524d]" />
+                                <div className="w-8 h-8 bg-gray-900 rounded-full flex-shrink-0 flex items-center justify-center">
+                                    <User className="w-5 h-5 text-white" />
                                 </div>
 
                                 {/* Línea conectora (excepto para el último elemento) */}

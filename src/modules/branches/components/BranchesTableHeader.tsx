@@ -29,8 +29,8 @@ export const getBranchesColumns = (
             const branch = row.original;
             return (
                 <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-[#b9f09e] rounded-lg flex items-center justify-center">
-                        <Church className="w-4 h-4 text-[#2d524d]" />
+                    <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
+                        <Church className="w-4 h-4 text-white" />
                     </div>
                     <span className="font-normal text-sm text-gray-900">{branch.name || "No definido"}</span>
                 </div>
@@ -160,14 +160,14 @@ export const getBranchesColumns = (
                         </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end" className="w-48">
-                        <DropdownMenuItem onClick={() => actions?.onView(branch)} className="cursor-pointer hover:bg-[#b9f09e]/20">
-                            <Eye className="mr-2 h-4 w-4 text-[#2d524d]" /> Ver detalles
+                        <DropdownMenuItem onClick={() => actions?.onView(branch)} className="cursor-pointer hover:bg-gray-100">
+                            <Eye className="mr-2 h-4 w-4 text-gray-900" /> Ver detalles
                         </DropdownMenuItem>
-                        <DropdownMenuItem onClick={() => actions?.onEdit(branch)} className="cursor-pointer hover:bg-[#b9f09e]/20">
-                            <Edit className="mr-2 h-4 w-4 text-[#2d524d]" /> Editar
+                        <DropdownMenuItem onClick={() => actions?.onEdit(branch)} className="cursor-pointer hover:bg-gray-100">
+                            <Edit className="mr-2 h-4 w-4 text-gray-900" /> Editar
                         </DropdownMenuItem>
-                        <DropdownMenuItem onClick={() => actions?.onDelete(branch)} className="cursor-pointer hover:bg-[#b9f09e]/20">
-                            <Trash2 className="mr-2 h-4 w-4 text-[#2d524d]" /> Eliminar
+                        <DropdownMenuItem onClick={() => actions?.onDelete(branch)} className="cursor-pointer hover:bg-gray-100">
+                            <Trash2 className="mr-2 h-4 w-4 text-gray-900" /> Eliminar
                         </DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
