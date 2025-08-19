@@ -12,6 +12,7 @@ export const getPaymentCategories = async (): Promise<PaymentCategory[]> => {
 };
 
 // Obtener todas las cuentas de pago del usuario
+
 // export const getPaymentAccounts = async (organizationId?: number, branchId?: number) => {
 //   const params = new URLSearchParams();
 //   if (organizationId) params.append('organizationId', organizationId.toString());

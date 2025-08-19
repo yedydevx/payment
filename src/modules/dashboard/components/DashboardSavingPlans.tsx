@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card} from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import { AlertTriangle, Home } from 'lucide-react';
 
 interface SavingPlan {
@@ -53,17 +53,17 @@ export const DashboardSavingPlans: React.FC<DashboardSavingPlansProps> = ({ plan
             <div className="p-6">
                 {/* Header */}
                 <div className="flex items-center justify-between mb-4">
-                                         <div className="text-lg font-semibold text-gray-900">
-                         Metas Financieras
-                     </div>
+                    <div className="text-lg font-semibold text-gray-900">
+                        Metas Financieras
+                    </div>
                 </div>
 
                 {/* Total de Ahorros */}
                 <div className="mb-6">
                     <div className="text-sm text-gray-600 mb-1">Total Ahorrado</div>
-                                         <div className="text-2xl font-bold text-gray-900">
-                         {formatCurrency(totalSavings)}
-                     </div>
+                    <div className="text-2xl font-bold text-gray-900">
+                        {formatCurrency(totalSavings)}
+                    </div>
                 </div>
 
                 {/* Lista de Planes */}
@@ -75,9 +75,9 @@ export const DashboardSavingPlans: React.FC<DashboardSavingPlansProps> = ({ plan
                             <div key={plan.id} className="rounded-lg">
                                 <div className="flex items-center justify-between mb-4">
                                     <div className="flex items-center gap-3">
-                                                                                 <div className={`w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center`}>
-                                             {plan.icon}
-                                         </div>
+                                        <div className={`w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center`}>
+                                            {plan.icon}
+                                        </div>
                                         <div className="text-sm font-semibold text-gray-900">
                                             {plan.name}
                                         </div>
@@ -86,10 +86,10 @@ export const DashboardSavingPlans: React.FC<DashboardSavingPlansProps> = ({ plan
 
                                 {/* Barra de Progreso */}
                                 <div className="w-full bg-gray-200 rounded-full h-2 mb-4">
-                                                                         <div
-                                         className="h-2 rounded-full bg-gray-900 transition-all duration-300"
-                                         style={{ width: `${percentage}%` }}
-                                     ></div>
+                                    <div
+                                        className="h-2 rounded-full bg-gray-900 transition-all duration-300"
+                                        style={{ width: `${percentage}%` }}
+                                    ></div>
                                 </div>
 
                                 {/* Información del Plan */}

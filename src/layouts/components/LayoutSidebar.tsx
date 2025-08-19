@@ -3,6 +3,7 @@ import { HiPower } from "react-icons/hi2";
 import { LayoutModules } from "./LayoutModules";
 import { LayoutSidebarProps } from "../types/layout.type";
 import { Lock, X } from "lucide-react";
+import LogoNegro from '@/assets/LogoNegro.png';
 
 export const LayoutSidebar = ({ active, handleActive, modules, onClose }: LayoutSidebarProps) => {
     const { logout } = useLogout();
@@ -25,7 +26,7 @@ export const LayoutSidebar = ({ active, handleActive, modules, onClose }: Layout
                 <div className="flex items-center gap-3 md:hidden lg:flex">
                     {/* Logo ZetaPay */}
                     <img
-                        src="/src/assets/LogoNegro.png"
+                        src={LogoNegro}
                         alt="ZetaPay Logo"
                         className="w-24 h-24 object-contain"
                     />
