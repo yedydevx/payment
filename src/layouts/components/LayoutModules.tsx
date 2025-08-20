@@ -35,7 +35,7 @@ export const LayoutModules = ({ active, handleActive, id, name, icon, subMenu }:
         }
     }, [hasActiveSubModule, wasManuallyClosed]);
 
-            const handleClick = () => {
+    const handleClick = () => {
         // En tablet: abrir dropdown para submódulos
         if (isTablet && subMenu) {
             setIsDropdownOpen(!isDropdownOpen);
@@ -69,36 +69,32 @@ export const LayoutModules = ({ active, handleActive, id, name, icon, subMenu }:
             {/* Módulo principal - siempre visible */}
             <div
                 onClick={handleClick}
-                className={`group flex items-center gap-3 p-2 md:p-3 rounded-full md:rounded-2xl cursor-pointer transition-all duration-200 justify-center text-lg ${
-                    isCurrentItemActive
+                className={`group flex items-center gap-3 p-2 md:p-3 rounded-full md:rounded-2xl cursor-pointer transition-all duration-200 justify-center text-lg ${isCurrentItemActive
                         ? 'bg-gray-900 text-white shadow-sm'
                         : 'hover:bg-gray-200 text-gray-700 hover:text-gray-900'
-                }`}
+                    }`}
             >
                 {/* Icono del módulo */}
-                <div className={`flex-shrink-0 transition-all duration-200 flex items-center justify-center ${
-                    isCurrentItemActive
+                <div className={`flex-shrink-0 transition-all duration-200 flex items-center justify-center ${isCurrentItemActive
                         ? 'text-white'
                         : 'text-gray-600 group-hover:text-gray-700'
-                }`}>
+                    }`}>
                     <div className="w-7 h-7 flex items-center justify-center">
                         {icon}
                     </div>
                 </div>
 
                 {/* Nombre del módulo - solo visible en móvil y desktop */}
-                <span className={`font-medium text-sm transition-colors duration-200 flex-1 md:hidden lg:block ${
-                    isCurrentItemActive ? 'text-white' : 'text-gray-700 group-hover:text-gray-900'
-                }`}>
+                <span className={`font-medium text-sm transition-colors duration-200 flex-1 md:hidden lg:block ${isCurrentItemActive ? 'text-white' : 'text-gray-700 group-hover:text-gray-900'
+                    }`}>
                     {name}
                 </span>
 
                 {subMenu && (
                     <ChevronRight
                         size={18}
-                        className={`flex-shrink-0 transition-all duration-200 md:hidden lg:block ${
-                            isSubMenuOpen ? 'rotate-90 text-gray-900' : 'rotate-0 text-gray-400 group-hover:text-gray-600'
-                        }`}
+                        className={`flex-shrink-0 transition-all duration-200 md:hidden lg:block ${isSubMenuOpen ? 'rotate-90 text-gray-900' : 'rotate-0 text-gray-400 group-hover:text-gray-600'
+                            }`}
                     />
                 )}
 
@@ -108,7 +104,7 @@ export const LayoutModules = ({ active, handleActive, id, name, icon, subMenu }:
                 )}
             </div>
 
-                                    {/* Dropdown para submódulos en modo tablet */}
+            {/* Dropdown para submódulos en modo tablet */}
             {subMenu && isTablet && isDropdownOpen && (
                 <div className="absolute left-full top-0 ml-2 bg-white rounded-lg shadow-lg border border-gray-200 z-50 min-w-[200px]">
                     {/* Header del dropdown */}
@@ -145,26 +141,23 @@ export const LayoutModules = ({ active, handleActive, id, name, icon, subMenu }:
                         <div
                             key={subItem.id}
                             onClick={() => handleSubMenuClick(subItem)}
-                            className={`group flex items-center gap-3 p-2 md:p-3 rounded-full md:rounded-2xl cursor-pointer transition-all duration-200 justify-center text-lg ${
-                                active === subItem.id
+                            className={`group flex items-center gap-3 p-2 md:p-3 rounded-full md:rounded-2xl cursor-pointer transition-all duration-200 justify-center text-lg ${active === subItem.id
                                     ? 'bg-gray-900 text-white shadow-sm'
                                     : 'hover:bg-gray-200 text-gray-700 hover:text-gray-900'
-                            }`}
+                                }`}
                         >
                             {/* Icono del submódulo */}
-                            <div className={`flex-shrink-0 transition-all duration-200 flex items-center justify-center ${
-                                active === subItem.id
+                            <div className={`flex-shrink-0 transition-all duration-200 flex items-center justify-center ${active === subItem.id
                                     ? 'text-white'
                                     : 'text-gray-600 group-hover:text-gray-700'
-                            }`}>
+                                }`}>
                                 <div className="w-5 h-5 flex items-center justify-center">
                                     {subItem.icon}
                                 </div>
                             </div>
 
-                            <span className={`font-medium text-sm transition-colors duration-200 flex-1 md:hidden lg:block ${
-                                active === subItem.id ? 'text-white' : 'text-gray-700 group-hover:text-gray-900'
-                            }`}>
+                            <span className={`font-medium text-sm transition-colors duration-200 flex-1 md:hidden lg:block ${active === subItem.id ? 'text-white' : 'text-gray-700 group-hover:text-gray-900'
+                                }`}>
                                 {subItem.name}
                             </span>
                         </div>

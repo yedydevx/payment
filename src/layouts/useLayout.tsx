@@ -2,9 +2,9 @@ import {
     LuHouse,
     LuArrowLeftRight,
     LuBuilding,
-    // LuCreditCard,
-    // LuDollarSign,
-    // LuShoppingCart,
+    LuCreditCard,
+    LuDollarSign,
+    LuShoppingCart,
 } from "react-icons/lu";
 import { useMemo } from "react";
 import { Module, SubModule } from "./types/layout.type";
@@ -39,28 +39,28 @@ const usePrivateLayout = () => {
             path: "/sucursales",
             title: "Sucursales"
         },
-        // {
-        //     id: 4,
-        //     name: "Pagos",
-        //     icon: <LuCreditCard />,
-        //     title: "Pagos",
-        //     subMenu: [
-        //         {
-        //             id: 41,
-        //             name: "Ingresos",
-        //             path: "/ingresos",
-        //             title: "Ingresos",
-        //             icon: <LuDollarSign />
-        //         },
-        //         {
-        //             id: 42,
-        //             name: "Egresos",
-        //             path: "/egresos",
-        //             title: "Egresos",
-        //             icon: <LuShoppingCart />
-        //         }
-        //     ]
-        // }
+        {
+            id: 4,
+            name: "Pagos",
+            icon: <LuCreditCard />,
+            title: "Pagos",
+            subMenu: [
+                {
+                    id: 41,
+                    name: "Ingresos",
+                    path: "/ingresos",
+                    title: "Ingresos",
+                    icon: <LuDollarSign />
+                },
+                {
+                    id: 42,
+                    name: "Egresos",
+                    path: "/egresos",
+                    title: "Egresos",
+                    icon: <LuShoppingCart />
+                }
+            ]
+        }
     ];
 
     // Filtrar módulos según permisos del usuario
